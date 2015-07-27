@@ -91,7 +91,7 @@ float do_cal(vector <HeartRate> hr, InitData id)
 		if (strcmp(id.gender, STRING_MALE)==0)
 			cal_sum += ((-55.0969 +(0.6309*hr[i].rate)+(0.1988*id.weight)+(0.2017*id.age))/4.184)*time;
 		else if (strcmp(id.gender, STRING_FEMALE)==0)
-			cal_sum += ((-20.4022 +(0.4472*hr[i].rate)+(0.1263*id.weight)+(0.074*id.age))/4.184)*time;
+			cal_sum += ((-20.4022 +(0.4472*hr[i].rate)-(0.1263*id.weight)+(0.074*id.age))/4.184)*time;
 		else
 			return -1.414;//never here
 	}

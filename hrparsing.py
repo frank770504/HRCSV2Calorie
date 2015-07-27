@@ -55,7 +55,7 @@ def do_cal(hr_lst, user):
 		if user.gender == 'Male':
 			cal += ((-55.0969 +(0.6309*hrx.rate)+(0.1988*user.weight)+(0.2017*user.age))/4.184)*time;
 		elif user.gender == 'Female':
-			cal += ((-20.4022 +(0.4472*hrx.rate)+(0.1263*user.weight)+(0.074*user.age))/4.184)*time;
+			cal += ((-20.4022 +(0.4472*hrx.rate)+(0.1263*user.weight)-(0.074*user.age))/4.184)*time;
 		else:
 			cal = -1.414;
 	return cal
